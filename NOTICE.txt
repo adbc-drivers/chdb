@@ -1,0 +1,25 @@
+ADBC Driver for chDB
+Copyright 2026 ADBC Drivers Contributors
+
+--------------------------------------------------------------------------------
+
+This driver is distributed as the chDB shared library (libchdb), which embeds
+the ClickHouse database engine and its third-party dependencies. The binary
+package therefore includes and is subject to the following attributions.
+
+chDB
+Copyright 2023-2026 ClickHouse, Inc. and the chDB authors
+https://github.com/chdb-io/chdb
+Licensed under the Apache License, Version 2.0.
+
+ClickHouse
+Copyright 2016-2026 ClickHouse, Inc.
+https://github.com/ClickHouse/ClickHouse
+Licensed under the Apache License, Version 2.0.
+
+This product embeds a large number of third-party libraries via the ClickHouse
+engine (Apache Arrow, Boost, zlib, LZ4, zstd, OpenSSL/BoringSSL, and many
+others). Each retains its own copyright and license. Their license texts live
+in the ClickHouse `contrib/` tree; `src/ci/scripts/generate_notice.sh` collects
+them into a THIRD_PARTY_NOTICES.txt from a chdb-core checkout. See
+src/docs/chdb.md.

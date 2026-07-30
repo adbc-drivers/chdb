@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-.claude/
-src/build/
-src/generated/
-target/
-.doit.db
-validation-report.xml
-*.tar.gz
+# Symbol export lists have no comment syntax for a license header.
+src/ci/scripts/adbc_driver_chdb_export.map
+src/ci/scripts/adbc_driver_chdb_export_macos.txt

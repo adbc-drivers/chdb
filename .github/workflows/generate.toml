@@ -1,0 +1,41 @@
+#:schema https://raw.githubusercontent.com/adbc-drivers/dev/refs/heads/main/schema/generate-schema.json
+# Copyright (c) 2026 ADBC Drivers Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Config for adbc-gen-workflow (adbc-drivers/dev). The driver is built by shell
+# scripts (src/ci/scripts/build.sh), so the implementation language is "script".
+
+driver = "chdb"
+
+[lang.script.build]
+lang-tools = []
+# adbc-make requires a toolchain for script builds ("cpp" selects the C/C++
+# manylinux image). Nothing is compiled here — build.sh downloads a prebuilt
+# libchdb and repackages it — so the container is skipped.
+additional-make-args = ["TOOLCHAIN=cpp", "USE_DOCKER=false"]
+
+[lang.script.test]
+# ci/scripts/test.sh checks that the packaged driver loads and answers a query.
+# chDB is embedded, so there is no service to start.
+service_name = ""
+
+[lang.script.validation]
+# Skipped until the validation suite lands. The driver's behaviour is covered by
+# tests/test_adbc_driver.py in chdb-core, where the driver is implemented.
+skip = true
+# chDB is embedded; validation spins up no external service. vendor_version
+# tracks the pinned chdb-core release.
+configs = [
+  { service_name = "", vendor_version = "26.5" },
+]

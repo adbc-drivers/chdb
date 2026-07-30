@@ -12,10 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-.claude/
-src/build/
-src/generated/
-target/
-.doit.db
-validation-report.xml
-*.tar.gz
+name = "chDB Driver"
+description = "An ADBC driver for chDB (embedded ClickHouse) developed by ClickHouse, Inc."
+publisher = "ClickHouse, Inc."
+# libchdb is Apache-2.0 (single license, unlike the clickhouse driver's Rust
+# wrapper which is MIT OR Apache-2.0).
+license = "Apache-2.0"
+
+[ADBC]
+version = "v1.1.0"

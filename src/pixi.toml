@@ -1,0 +1,41 @@
+# Copyright (c) 2025-2026 ADBC Drivers Contributors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# !!!! AUTO-GENERATED FILE. !!!!
+# USE adbc-gen-workflow (see adbc-drivers/dev) TO UPDATE THIS FILE.
+#
+# One edit is applied by hand after generating; reapply it when regenerating:
+# `platforms` drops win-64 and adds osx-64, to match the build matrices in
+# .github/workflows. chDB has no Windows build but does ship a macOS x86_64
+# library, and the generator cannot yet be told which platforms to target
+# (adbc-drivers/dev#53).
+
+[workspace]
+authors = ["ADBC Drivers Contributors"]
+channels = ["conda-forge"]
+name = "adbc-driver-chdb"
+platforms = ["linux-64", "linux-aarch64", "osx-64", "osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+release = "adbc-release"
+validate = "pytest -vvs --junit-xml=validation-report.xml -rfEsxX validation/tests/"
+gendocs = "python -m validation.tests.generate_documentation"
+
+[dependencies]
+python = ">=3.14.3,<3.15"
+
+[pypi-dependencies]
+adbc-drivers-dev = { git = "https://github.com/adbc-drivers/dev" }
+adbc-drivers-validation = { git = "https://github.com/adbc-drivers/validation" }

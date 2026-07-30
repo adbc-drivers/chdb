@@ -45,7 +45,11 @@ macOS only** (no Windows) because it embeds the full ClickHouse engine.
 
 ---
 
-📥 To install it with [dbc](https://docs.columnar.tech/dbc), run `dbc install --pre chdb`.
+🚧 **Work in progress** — the chDB ADBC driver is being brought up in this
+repository and is **not published to the dbc registry yet**. Once the first
+prerelease is out, it will be installable with
+[dbc](https://docs.columnar.tech/dbc) via `dbc install --pre chdb`. Until then
+you can build it from source (see [`src/docs/chdb.md`](./src/docs/chdb.md)).
 
 🐛 To report an issue, go to [github.com/chdb-io/chdb-core/issues](https://github.com/chdb-io/chdb-core/issues).
 
@@ -53,7 +57,7 @@ macOS only** (no Windows) because it embeds the full ClickHouse engine.
 
 ⌨️ To see the driver source code, go to [github.com/chdb-io/chdb-core](https://github.com/chdb-io/chdb-core) (`programs/local/chdb-adbc.cpp`).
 
-💬 To ask questions, email hello@adbc-drivers.org or chat with us on the [Columnar Community Slack](https://join.slack.com/t/columnar-community/shared_invite/zt-3gt5cb69i-KRjJj~mjUZv5doVmpcVa4w).
+💬 To ask questions, email hello@adbc-drivers.org, chat with us on the [Columnar Community Slack](https://join.slack.com/t/columnar-community/shared_invite/zt-3gt5cb69i-KRjJj~mjUZv5doVmpcVa4w), or reach the chDB / ClickHouse community on the [ClickHouse Community Slack](https://clickhouse.com/slack).
 
 ## Connecting
 
@@ -74,5 +78,5 @@ with dbapi.connect(driver="chdb", uri="chdb://") as conn:
     ...
 ```
 
-See [`DRIVER_PRODUCT_DESIGN.md`](./DRIVER_PRODUCT_DESIGN.md) for how the shared
-library that backs this package is produced.
+See [`src/docs/chdb.md`](./src/docs/chdb.md) for how the shared library that
+backs this package is produced.

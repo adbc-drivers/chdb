@@ -1,0 +1,2 @@
+_AdbcDriverInit
+_chdb_adbc_init

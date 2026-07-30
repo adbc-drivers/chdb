@@ -12,10 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-.claude/
-src/build/
-src/generated/
-target/
-.doit.db
-validation-report.xml
-*.tar.gz
+# chDB maintainers plus the ADBC Driver Foundry reviewers.
+*                       @abonander @esadek @ShawnChen-Sirius
+
+# Build & packaging infrastructure.
+/src/                   @abonander @esadek @ShawnChen-Sirius
+/.github/               @abonander @esadek @ShawnChen-Sirius

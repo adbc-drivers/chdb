@@ -12,10 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-.claude/
-src/build/
-src/generated/
-target/
-.doit.db
-validation-report.xml
-*.tar.gz
+"""Post-install check: a dbc-installed chDB driver loads and answers a query.
+
+Mirrors adbc-drivers/clickhouse:src/ci/test_package.py, but chDB is embedded so
+there is no network endpoint -- we open an in-memory database instead.
+"""
+
+import adbc_driver_manager.dbapi
+
+
+def test_package() -> None:
+    # dbc registers the driver under the package name ("chdb").
+    with adbc_driver_manager.dbapi.connect(
+        driver="chdb", uri="chdb://", autocommit=True
+    ) as conn:
+        with conn.cursor() as cursor:
+            cursor.execute("SELECT 1")
+            assert cursor.fetchone() == (1,)

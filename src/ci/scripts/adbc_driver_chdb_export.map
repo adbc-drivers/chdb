@@ -1,0 +1,10 @@
+{
+    global:
+        /* ADBC driver manager entrypoints. `AdbcDriverInit` is the symbol the
+           standard driver manager resolves; `chdb_adbc_init` is chDB's alias. */
+        AdbcDriverInit;
+        chdb_adbc_init;
+
+    local:
+        *;
+};
