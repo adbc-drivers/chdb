@@ -12,11 +12,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Nothing is built here; the driver ships with the engine (see README.md).
 .claude/
-build/out/
-build/downloads/
-generated/
-target/
-.doit.db
-validation-report.xml
-*.tar.gz
