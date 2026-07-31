@@ -16,7 +16,7 @@
 
 ## Where can I find the ADBC driver for chDB?
 
-**The ADBC Driver for chDB is maintained in the chDB project.**
+**The ADBC Driver for chDB is maintained by ClickHouse.**
 
 [chDB](https://clickhouse.com/chdb) is an embedded SQL engine powered by
 ClickHouse: an in-process OLAP database with no server to run. This driver
