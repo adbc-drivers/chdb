@@ -39,17 +39,13 @@ macOS only** (no Windows) because it embeds the full ClickHouse engine.
 > source (`programs/local/chdb-adbc.cpp`) lives. **This packaging repo builds
 > the ADBC driver from `chdb-core`.**
 
-> [!NOTE]
-> Only prerelease versions of the driver are currently available, so you must
-> use `--pre` with dbc 0.2.0 or newer to install the driver.
-
 ---
 
-📥 To install it with [dbc](https://docs.columnar.tech/dbc), run `dbc install --pre chdb`.
+📥 To install it with [dbc](https://docs.columnar.tech/dbc), run `dbc install chdb`.
 
 🐛 To report an issue, go to [github.com/chdb-io/chdb-core/issues](https://github.com/chdb-io/chdb-core/issues).
 
-📚 To browse the documentation, go to [docs.adbc-drivers.org/drivers/chdb](https://docs.adbc-drivers.org/drivers/chdb).
+📚 To browse the documentation, go to [clickhouse.com/docs/chdb/install/adbc](https://clickhouse.com/docs/chdb/install/adbc).
 
 ⌨️ To see the driver source code, go to [github.com/chdb-io/chdb-core](https://github.com/chdb-io/chdb-core) (`programs/local/chdb-adbc.cpp`).
 
