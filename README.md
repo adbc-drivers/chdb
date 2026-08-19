@@ -51,7 +51,7 @@ it through WSL2.
 
 📚 To browse the documentation, go to [clickhouse.com/docs/chdb/install/adbc](https://clickhouse.com/docs/chdb/install/adbc).
 
-🧪 To run quickstarts, go to [github.com/columnar-tech/adbc-quickstarts/tree/by-database/chdb](https://github.com/columnar-tech/adbc-quickstarts/tree/by-database/chdb).
+🧪 To run quickstarts, go to [github.com/columnar-tech/adbc-quickstarts/tree/by-database/chdb](https://github.com/columnar-tech/adbc-quickstarts/tree/by-database/chdb#readme).
 
 ⌨️ To see the source code, go to [github.com/chdb-io/chdb-core](https://github.com/chdb-io/chdb-core) (`programs/local/chdb-adbc.cpp`).
 
